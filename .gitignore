@@ -1,0 +1,21 @@
+# Ignorar archivos de compilación y depuración
+*.elf
+*.list
+*.map
+*.cycl
+*.o
+*.su
+*.o.*
+
+# Ignorar carpetas de construcción comunes
+/build/
+/obj/
+/bin/
+
+# Ignorar archivos de entorno y configuración local
+.env
+*.local
+
+# Ignorar archivos de IDE
+.vscode/
+.idea/
