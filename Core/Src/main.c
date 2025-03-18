@@ -138,10 +138,8 @@ int main(void)
        int8_t LSB = (int8_t)(xd_grados_decimal & 0xFF);
 
        // Descomponer xd_grados_decimal en dos bytes (uint8_t)
-       joystickReportCONtainer.HID_Report[0] = LSB;//MSB;  // MSB
-       joystickReportCONtainer.HID_Report[1] = MSB;//LSB;  // LSB
-
-       //joystickReportCONtainer.HID_Report = LSB;  // LSB
+       joystickReportCONtainer.HID_Report[0] = LSB;	//LSB
+       joystickReportCONtainer.HID_Report[1] = MSB;	//MSB
 
        // Enviar el reporte HID al host
        USBD_HID_SendReport(&hUsbDeviceFS,(int8_t*)& joystickReportCONtainer, sizeof( joystickReport ));
